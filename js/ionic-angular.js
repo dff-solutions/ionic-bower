@@ -4196,6 +4196,7 @@ function($http, $templateCache, $timeout) {
     if (toCache.length === 0) return;
 
     var i = 0;
+    var template;
     while (i < 4 && (template = toCache.pop())) {
       // note that inline templates are ignored by this request
       if (isString(template)) $http.get(template, { cache: $templateCache });
